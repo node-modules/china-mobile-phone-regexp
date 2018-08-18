@@ -1,4 +1,4 @@
-# egg-china-mobile-phone-regexp
+# china-mobile-phone-regexp
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -31,12 +31,19 @@ $ npm i china-mobile-phone-regexp --save
 ## Usage
 
 ```js
+const phone = require('china-mobile-phone-regexp');
+// Is phone number?
+console.log(phone.is('13800138000'));
 
+// Is CHINA_MOBILE phone number?
+console.log(phone.is('13800138000', phone.CHINA_MOBILE));
+
+// Is CHINA_UNICOM phone number?
+console.log(phone.is('13800138000', phone.CHINA_UNICOM));
+
+// Is CHINA_TELECOM phone number?
+console.log(phone.is('13800138000', phone.CHINA_TELECOM));
 ```
-
-## Example
-
-<!-- example here -->
 
 ## Questions & Suggestions
 
